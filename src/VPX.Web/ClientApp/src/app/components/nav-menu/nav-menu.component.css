@@ -1,0 +1,34 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+nav a.nav-link:hover {
+  color: var(--app-color);
+}
+
+nav li {
+  border-bottom: none;
+}
+
+nav li.link-active {
+  border-bottom: 2px solid var(--app-color);
+}
+
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.user-profile-wrapper {
+  position: relative;
+}

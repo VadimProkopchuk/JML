@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+   vpx_web_client:
+      container_name: "vpx_web_client:0.0.2"
+      build:
+         context: .
+         dockerfile: VPX.Web/Dockerfile
+      depends_on:
+      - vpx_web_api
+
+   vpx_web_api:
+      container_name: "vpx_api:0.0.2"
+      build:
+         context: .
+         dockerfile: VPX.API/Dockerfile
+      depends_on: 
+      - vpx_db
+
+   vpx_db:
+      image: "mcr.microsoft.com/mssql/server"
+      container_name: "vpx_db"
+      environment:
+         SA_PASSWORD: "!QAZ2wsx12"
+         ACCEPT_EULA: "Y"
