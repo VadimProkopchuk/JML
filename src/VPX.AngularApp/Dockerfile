@@ -1,10 +1,11 @@
-FROM node:12.16.1-alpine As builder
+FROM node:10
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-RUN npm install -g @angular/cli@6.0.0
+COPY package*.json ./
+
 RUN npm install
 
 COPY . .
 
-CMD ng serve --host 0.0.0.0
+CMD ["npm", "start"]

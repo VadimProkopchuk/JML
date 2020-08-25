@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiEndpoint: 'https://localhost:44306/api/'
+  apiEndpoint: 'htpp://vpx_api_service/api/'
 };
