@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "VPX.Web": {
+    "VPX.Presentation.WebClient": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "VPX.Web:build"
+            "browserTarget": "VPX.Presentation.WebClient:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "VPX.Web:build:production"
+              "browserTarget": "VPX.Presentation.WebClient:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VPX.Web:build"
+            "browserTarget": "VPX.Presentation.WebClient:build"
           }
         },
         "test": {
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "VPX.Web"
+  "defaultProject": "VPX.Presentation.WebClient"
 }

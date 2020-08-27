@@ -22,6 +22,13 @@ namespace VPX.API
         {
             var appSettings = services.ConfigureAppSettings(Configuration);
 
+            services.AddCors(setup => setup.AddPolicy("VPXPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyHeader();
+            }));
+
             services
                 .AddControllers(options => options.Filters.Add(new HttpResponseExceptionFilter()))
                 .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
@@ -47,6 +54,7 @@ namespace VPX.API
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseCors("VPXPolicy");
             app.UseAuthentication();
             app.UseAuthorization();
 

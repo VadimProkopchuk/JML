@@ -13,8 +13,8 @@ import {UserSummaryDialogComponent} from '../dialogs/user-summary-dialog/user-su
 })
 export class NavMenuComponent {
 
-  constructor(public pageService: PageService,
-              public authService: AuthService,
+  constructor(private pageService: PageService,
+              private authService: AuthService,
               private currentUserService: CurrentUserService,
               private userService: CurrentUserService,
               private router: Router,

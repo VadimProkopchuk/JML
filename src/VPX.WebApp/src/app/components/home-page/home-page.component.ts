@@ -13,8 +13,8 @@ import {CurrentUserService} from '../../shared/services/current-user.service';
 export class HomePageComponent implements OnInit {
   message: string;
 
-  constructor(public authService: AuthService,
-              private pageService: PageService,
+  constructor(private pageService: PageService,
+              private authService: AuthService,
               private activatedRoute: ActivatedRoute,
               private alertService: AlertService,
               private currentUserService: CurrentUserService) {
